@@ -1,14 +1,13 @@
 import React from "react";
 import { RichText } from "prismic-reactjs";
-import { Link } from "prismic-reactjs";
+import { Link as PrismicLink } from "prismic-reactjs";
 import styled from "@emotion/styled";
 import { breakpoints } from "../../utils/breakpoints";
+import Link from "next/link";
 
 const NavbarMobile = ({ menu = [] }) => (
   <Navigation>
-    <a href="/" className="logo">
-      {RichText.asText(menu.data.title)}
-    </a>
+    <Link href="/">{RichText.asText(menu.data.title)}</Link>
     <Links menuLinks={menu.data.menu_links} />
   </Navigation>
 );
@@ -18,9 +17,13 @@ const Links = ({ menuLinks }) => {
     return (
       <Menu>
         {menuLinks.map((menuLink, index) => (
-          <a key={`menulink-${index}`} href={Link.url(menuLink.link)}>
-            {RichText.asText(menuLink.label)}
-          </a>
+          <Link
+            key={`menulink-${index}`}
+            href={PrismicLink.url(menuLink.link)}
+            passHref
+          >
+            <a>{RichText.asText(menuLink.label)}</a>
+          </Link>
         ))}
       </Menu>
     );

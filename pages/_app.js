@@ -1,6 +1,5 @@
 import "../styles/resets.css";
 import "../styles/globals.css";
-import React from "react";
 import NextApp from "next/app";
 import { Client } from "../prismic-configuration";
 

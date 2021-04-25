@@ -7,7 +7,7 @@ const Layout = ({ children, menu }) => {
   return (
     <div>
       <Head>
-        <title> Prismic Next.js Multi Page Website</title>
+        <title>Julio Caesar</title>
       </Head>
       <Navbar menu={menu} />
       <NavbarMobile menu={menu} />

@@ -1,21 +1,28 @@
 import React from "react";
 import { RichText } from "prismic-reactjs";
-import { Link } from "prismic-reactjs";
+import { Link as PrismicLink } from "prismic-reactjs";
 import styled from "@emotion/styled";
 import { breakpoints } from "../../utils/breakpoints";
+import Link from "next/link";
 
 const MySlice = ({ slice }) => (
   <BlogLists>
     {slice?.items?.map((item, i) => (
-      <a key={`item.link-${i}`} href={Link.url(item.link)}>
-        <img
-          src={item.thumbnail.url}
-          alt={item.thumbnail.alt}
-          key={`img-${i}`}
-        />
-        <RichText render={item.title} key={`rich-text-${i}`} />
-        <RichText render={item.excerpt} key={`rich-text-${i}`} />
-      </a>
+      <Link
+        key={`item.linking-${i}`}
+        href={PrismicLink.url(item.linking)}
+        passHref
+      >
+        <a>
+          <img
+            src={item.thumbnail.url}
+            alt={item.thumbnail.alt}
+            key={`img-${i}`}
+          />
+          <RichText render={item.title} key={`rich-text-${i}`} />
+          <RichText render={item.excerpt} key={`rich-text-${i}`} />
+        </a>
+      </Link>
     ))}
   </BlogLists>
 );

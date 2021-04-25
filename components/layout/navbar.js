@@ -11,13 +11,16 @@ const Navbar = ({ menu = [] }) => (
       {RichText.asText(menu.data.title)}
     </a>
     <div>
-      <SocialBtn href="https://github.com/G9000" target="blank">
+      <SocialBtn href="https://github.com/G9000" target="_blank">
         <SiGithub />
       </SocialBtn>
-      <SocialBtn href="https://www.linkedin.com/in/juliocaesar/" target="blank">
+      <SocialBtn
+        href="https://www.linkedin.com/in/juliocaesar/"
+        target="_blank"
+      >
         <SiLinkedin />
       </SocialBtn>
-      <SocialBtn href="https://www.behance.net/juliocaesar" target="blank">
+      <SocialBtn href="https://www.behance.net/juliocaesar" target="_blank">
         <SiBehance />
       </SocialBtn>
     </div>
@@ -49,8 +52,8 @@ const Navigation = styled.header`
     justify-content: space-between;
     width: min(1400px, 80%);
     margin: 0 auto;
-    padding: 1rem 1.5rem;
-    height: 90px;
+    padding: 1rem 0;
+    height: 120px;
     align-items: center;
 
     div {
@@ -63,8 +66,21 @@ const Navigation = styled.header`
 const Menu = styled.nav`
   display: flex;
   gap: 2rem;
+
+  a {
+    transition: color 300ms ease;
+
+    :hover {
+      color: #87479d;
+    }
+  }
 `;
 
 const SocialBtn = styled.a`
   font-size: 1.45rem;
+  transition: color 300ms ease;
+
+  :hover {
+    color: #87479d;
+  }
 `;

@@ -37,4 +37,8 @@ const BlogHeader = styled.section`
     margin: 0 auto;
     padding: 2.5rem 0;
   }
+
+  img {
+    border-radius: 10px;
+  }
 `;

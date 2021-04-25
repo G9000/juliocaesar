@@ -38,14 +38,13 @@
           },
           "type": "StructuredText"
         },
-        "link": {
-          "type": "Link",
+        "linking": {
           "config": {
             "label": "",
-            "id": "link",
             "placeholder": "",
             "allowTargetBlank": true
-          }
+          },
+          "type": "Link"
         }
       }
     }

@@ -52,10 +52,11 @@ const HeroContainer = styled.section`
 `;
 
 const HeroContent = styled.div`
-  width: clamp(100%, 2.5vw, 60ch);
+  width: 100%;
 
   h3 {
     font-weight: 300;
     margin-top: 1.5rem;
+    max-width: 45ch;
   }
 `;
