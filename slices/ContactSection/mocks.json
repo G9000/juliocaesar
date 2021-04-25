@@ -1,0 +1,31 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "ContactSection",
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Empower 24/7 vortals",
+          "spans": []
+        }
+      ],
+      "Contact": {
+        "link_type": "Web",
+        "url": "http://twitter.com"
+      },
+      "ContactLabel": [
+        {
+          "type": "paragraph",
+          "text": "Occaecat dolore Lorem dolor. Ea quis laborum ea Lorem do reprehenderit culpa proident.",
+          "spans": []
+        }
+      ]
+    },
+    "items": [],
+    "slice_type": "contact_section"
+  }
+]
