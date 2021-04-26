@@ -1,2 +1,2 @@
 
-Slice Machine Site
+Slice Machine Experiment Site
