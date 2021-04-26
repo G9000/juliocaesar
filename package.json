@@ -12,6 +12,7 @@
     "export": "next export",
     "prepublishOnly": "node ./node_modules/sm-commons/scripts/bundle",
     "slicemachine": "start-slicemachine --port 9999",
+    "start-storybook": "start-storybook -s ./public -p 9001",
     "storybook": "start-storybook -p 8888",
     "build-storybook": "build-storybook"
   },

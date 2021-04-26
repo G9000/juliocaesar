@@ -27,6 +27,10 @@ const ContactSection = styled.section`
   height: auto;
   margin: 100px auto;
 
+  h1 {
+    width: min(650px, 100%);
+  }
+
   a {
     display: inline-flex;
     background: #f7e3fd;
@@ -34,10 +38,11 @@ const ContactSection = styled.section`
     border-radius: 10px;
     transition: all 300ms ease;
     margin-top: 1.5rem;
+    color: #2a004a;
 
     :hover {
       background: #87479d;
-      color: whitesmoke;
+      color: #f7e3fd;
     }
 
     h6 {

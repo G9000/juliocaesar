@@ -1,15 +1,22 @@
 @import url("https://use.typekit.net/bte0lkl.css");
 
 :root {
-  --font-xl: clamp(1.414rem, 2.5vw, 2.827rem);
+  /* Color Varaible */
+  --dark-lilac: #260142;
+  --light-lilac: #e7d5f9;
+  --normal-grey: #6e6e77;
+
+  /* Font Size */
+  --font-xl: clamp(1.414rem, 2.5vw, 2rem);
   --font-lg: clamp(1.563rem, 2.5vw, 1.999rem);
   --font-md: 1.25rem;
   --font-sm: 1rem;
   --font-xs: 0.85rem;
 
+  /* Font Weight */
   --weight-light: 300;
-  --weight-regular: 400;
-  --weight-bold: 600;
+  --weight-regular: 500;
+  --weight-bold: 700;
 }
 
 html,
@@ -41,14 +48,19 @@ a {
 
 h1 {
   font-size: var(--font-xl);
+  font-weight: var(--weight-bold);
+  font-family: urbane, sans-serif;
+  color: var(--dark-lilac);
 }
 
 h2 {
   font-size: var(--font-lg);
+  color: var(--dark-lilac);
 }
 
 h3 {
   font-size: var(--font-md);
+  color: var(--dark-lilac);
 }
 
 h4 {
@@ -62,4 +74,8 @@ h5 {
 h6 {
   font-size: var(--font-sm);
   text-transform: uppercase;
+}
+
+p {
+  font-size: var(--font-sm);
 }

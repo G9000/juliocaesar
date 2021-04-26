@@ -4,6 +4,7 @@ import { Link as PrismicLink } from "prismic-reactjs";
 import styled from "@emotion/styled";
 import { breakpoints } from "../../utils/breakpoints";
 import Link from "next/link";
+import Image from "next/image";
 
 const MySlice = ({ slice }) => (
   <BlogLists>
@@ -14,13 +15,22 @@ const MySlice = ({ slice }) => (
         passHref
       >
         <a>
-          <img
+          <Image
             src={item.thumbnail.url}
             alt={item.thumbnail.alt}
             key={`img-${i}`}
+            layout="intrinsic"
+            width={600}
+            height={400}
           />
-          <RichText render={item.title} key={`rich-text-${i}`} />
-          <RichText render={item.excerpt} key={`rich-text-${i}`} />
+          <div className="bloglist-content">
+            <RichText
+              render={item.title}
+              key={`rich-text-${i}`}
+              className="bloglist-content-title"
+            />
+            <RichText render={item.excerpt} key={`rich-text-${i}`} />
+          </div>
         </a>
       </Link>
     ))}
@@ -47,5 +57,9 @@ const BlogLists = styled.section`
   img {
     width: 100%;
     border-radius: 10px;
+  }
+
+  .bloglist-content {
+    margin-top: 40px;
   }
 `;

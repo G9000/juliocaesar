@@ -2,12 +2,10 @@ import React from "react";
 import { RichText } from "prismic-reactjs";
 import styled from "@emotion/styled";
 import { breakpoints } from "../../utils/breakpoints";
+import Image from "next/image";
 
 const MySlice = ({ slice }) => (
   <HeroContainer>
-    <div>
-      <img src={slice.primary.image.url} alt={slice.primary.image.alt} />
-    </div>
     <HeroContent>
       {slice.primary.title ? (
         <RichText render={slice.primary.title} />
@@ -21,6 +19,13 @@ const MySlice = ({ slice }) => (
         <h3>Template slice, update me!</h3>
       )}
     </HeroContent>
+    <Image
+      src={slice.primary.image.url}
+      alt={slice.primary.image.alt}
+      layout="intrinsic"
+      width={800}
+      height={550}
+    />
   </HeroContainer>
 );
 
@@ -35,28 +40,25 @@ const HeroContainer = styled.section`
 
   @media ${breakpoints.lg} {
     flex-direction: row;
-    gap: 2.5rem;
     margin-bottom: 200px;
   }
 
-  * {
-    width: 100%;
-  }
-
   img {
-    max-width: 800px;
-    width: 100%;
-    height: auto;
     border-radius: 10px;
   }
 `;
 
 const HeroContent = styled.div`
-  width: 100%;
+  width: min(600px, 100%);
+  margin-bottom: 50px;
 
   h3 {
     font-weight: 300;
     margin-top: 1.5rem;
-    max-width: 45ch;
+  }
+
+  @media ${breakpoints.lg} {
+    margin-right: 10%;
+    margin-bottom: 0;
   }
 `;
