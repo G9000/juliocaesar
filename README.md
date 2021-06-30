@@ -1,2 +1,2 @@
 
-Slice Machine Experiment Site
+Slice Machine & Storybook Experiment Site
