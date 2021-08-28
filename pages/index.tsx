@@ -1,11 +1,17 @@
 import type { NextPage } from "next";
+import Prismic from "@prismicio/client";
+import { client } from "../utils/prismic-configuration";
+import { RichText } from "prismic-reactjs";
+
 import Head from "next/head";
 import Image from "next/image";
 import styled from "@emotion/styled";
 
 import Layout from "../src/layout/Layout";
 
-const Home: NextPage = () => {
+// import Landing from "./landing";
+
+const Home: NextPage = (props) => {
   return (
     <Wrapper>
       <Head>
@@ -14,11 +20,33 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout />
+      <div>
+        <ul>
+          {props.posts.results.map((post) => (
+            <li key={post.uid}>
+              <h1>{RichText.asText(post.data.post_title)}</h1>
+              <h2>{RichText.asText(post.data.post_sub)}</h2>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {/* <Landing /> */}
     </Wrapper>
   );
 };
 
 export default Home;
+
+export async function getStaticProps() {
+  const posts = await client.query(
+    Prismic.Predicates.at("document.type", "post")
+  );
+  return {
+    props: {
+      posts,
+    },
+  };
+}
 
 const Wrapper = styled.div`
   background: #111213;
