@@ -6,26 +6,17 @@
     "version": "sktwi1xtmkfgx8626",
     "description": "HeroSection",
     "primary": {
-      "image": {
-        "dimensions": {
-          "width": 900,
-          "height": 500
-        },
-        "alt": "Placeholder image",
-        "copyright": null,
-        "url": "https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?w=900&h=500&fit=crop"
-      },
       "title": [
         {
           "type": "heading1",
-          "text": "Facilitate plug-and-play synergies",
+          "text": "Recontextualize 24/365 web-readiness",
           "spans": []
         }
       ],
       "description": [
         {
-          "type": "heading3",
-          "text": "Extend bricks-and-clicks models",
+          "type": "paragraph",
+          "text": "Mollit Lorem deserunt excepteur quis eiusmod amet tempor nostrud enim tempor non velit adipisicing. Anim elit amet aute non consequat ad officia. Adipisicing commodo consectetur tempor exercitation laborum amet fugiat cupidatat amet excepteur tempor irure non amet.",
           "spans": []
         }
       ]

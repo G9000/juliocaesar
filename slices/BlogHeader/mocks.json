@@ -8,15 +8,15 @@
     "primary": {
       "title": [
         {
-          "type": "heading1",
-          "text": "Transition user-centric relationships",
+          "type": "heading2",
+          "text": "Visualize sticky e-tailers",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "Occaecat ullamco adipisicing deserunt laborum excepteur commodo dolore. Velit elit reprehenderit nostrud sint incididunt sint anim id non labore duis incididunt.",
+          "text": "Reprehenderit est eu excepteur eiusmod cupidatat exercitation eiusmod exercitation. Lorem sit voluptate aliquip aute nulla culpa eu sit laborum aliquip duis proident excepteur esse nostrud. Cillum deserunt pariatur qui quis adipisicing exercitation nulla nulla elit quis in labore ea fugiat eu.",
           "spans": []
         }
       ],
@@ -27,7 +27,7 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51?w=900&h=500&fit=crop"
+        "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
       }
     },
     "items": [],

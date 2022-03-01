@@ -23,12 +23,12 @@ export default MySlice;
 const ContactSection = styled.section`
   display: flex;
   flex-direction: column;
-  width: min(1200px, 80%);
+  width: min(1400px, 80%);
   height: auto;
   margin: 100px auto;
 
   h1 {
-    width: min(650px, 100%);
+    width: 100%;
   }
 
   a {

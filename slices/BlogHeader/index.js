@@ -1,6 +1,7 @@
 import React from "react";
 import { RichText } from "prismic-reactjs";
 import styled from "@emotion/styled";
+import { breakpoints } from "../../utils/breakpoints";
 
 const MySlice = ({ slice }) => (
   <BlogHeader>
@@ -12,7 +13,9 @@ const MySlice = ({ slice }) => (
       )}
 
       {slice.primary.description ? (
-        <RichText render={slice.primary.description} />
+        <div style={{ color: "#909090" }}>
+          <RichText render={slice.primary.description} />
+        </div>
       ) : (
         <p>start by editing this slice from inside the SliceMachine builder!</p>
       )}
@@ -27,18 +30,17 @@ const BlogHeader = styled.section`
   display: flex;
   flex-direction: column;
   justify-items: center;
-  width: min(1200px, 80%);
+  width: min(1400px, 80%);
   margin: 0 auto;
   text-align: center;
-  margin-top: 100px;
 
-  div {
-    width: min(60ch, 80%);
-    margin: 0 auto;
-    padding: 2.5rem 0;
+  @media ${breakpoints.lg} {
+    margin-top: 100px;
   }
 
-  img {
-    border-radius: 10px;
+  div {
+    width: min(65ch, 80%);
+    margin: 0 auto;
+    padding: 2.5rem 0;
   }
 `;

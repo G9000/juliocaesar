@@ -11,14 +11,6 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "HeroSection",
       "primary": {
-        "image": {
-          "config": {
-            "label": "",
-            "constraint": {},
-            "thumbnails": []
-          },
-          "type": "Image"
-        },
         "title": {
           "config": {
             "label": "Title",
@@ -33,7 +25,7 @@
             "label": "Description",
             "placeholder": "A nice description of your feature",
             "allowTargetBlank": true,
-            "single": "heading3,hyperlink"
+            "multi": "hyperlink,paragraph"
           },
           "type": "StructuredText"
         }

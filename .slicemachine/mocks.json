@@ -9,12 +9,9 @@
       },
       "description": {
         "config": {
-          "patternType": "HEADING",
+          "patternType": "PARAGRAPH",
           "blocks": 1
         }
-      },
-      "image": {
-        "content": "https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8"
       }
     }
   },

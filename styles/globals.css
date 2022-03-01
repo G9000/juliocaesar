@@ -7,7 +7,7 @@
   --normal-grey: #6e6e77;
 
   /* Font Size */
-  --font-xl: clamp(1.414rem, 2.5vw, 2rem);
+  --font-xl: clamp(1.414rem, 2.5vw, 4.6rem);
   --font-lg: clamp(1.563rem, 2.5vw, 1.999rem);
   --font-md: 1.25rem;
   --font-sm: 1rem;
@@ -16,6 +16,7 @@
   /* Font Weight */
   --weight-light: 300;
   --weight-regular: 500;
+  --weight-semi: 600;
   --weight-bold: 700;
 }
 
@@ -48,34 +49,45 @@ a {
 
 h1 {
   font-size: var(--font-xl);
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-regular);
   font-family: urbane, sans-serif;
   color: var(--dark-lilac);
 }
 
 h2 {
   font-size: var(--font-lg);
+  font-family: urbane, sans-serif;
   color: var(--dark-lilac);
 }
 
 h3 {
   font-size: var(--font-md);
+  font-family: urbane, sans-serif;
   color: var(--dark-lilac);
 }
 
 h4 {
   font-size: var(--font-sm);
+  font-family: urbane, sans-serif;
 }
 
 h5 {
   font-size: var(--font-xs);
+  font-family: urbane, sans-serif;
 }
 
 h6 {
   font-size: var(--font-sm);
+  font-family: urbane, sans-serif;
   text-transform: uppercase;
 }
 
 p {
   font-size: var(--font-sm);
+  font-family: proxima-soft, sans-serif;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid hsla(216, 5%, 98%, 1);
 }

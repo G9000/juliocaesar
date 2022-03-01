@@ -14,7 +14,7 @@ const BlogContent = styled.section`
   display: flex;
   flex-direction: column;
 
-  width: min(600px, 80%);
+  width: min(1000px, 80%);
   margin: 100px auto;
 
   img {
@@ -24,5 +24,9 @@ const BlogContent = styled.section`
   a {
     color: #ce84e1;
     text-decoration: underline;
+  }
+
+  p {
+    color: #6c6c6c;
   }
 `;

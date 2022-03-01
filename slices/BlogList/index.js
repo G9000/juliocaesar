@@ -43,7 +43,7 @@ const BlogLists = styled.section`
   display: grid;
   gap: 2.5rem;
   grid-template-columns: 1fr;
-  width: min(1200px, 80%);
+  width: min(1400px, 80%);
   margin: 0 auto;
 
   @media ${breakpoints.md} {
@@ -56,7 +56,6 @@ const BlogLists = styled.section`
 
   img {
     width: 100%;
-    border-radius: 10px;
   }
 
   .bloglist-content {
