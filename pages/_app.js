@@ -9,8 +9,8 @@ import { useRouter } from "next/router";
 const MyApp = (props) => {
   const router = useRouter();
   useEffect(() => {
-    Fathom.load("RJUTYVQW", {
-      includedDomains: ["www.juliocaesar.co"],
+    Fathom.load("ZTYTBKZZ", {
+      includedDomains: ["juliocaesar.co"],
     });
 
     function onRouteChangeComplete() {
@@ -31,7 +31,6 @@ const MyApp = (props) => {
 };
 
 MyApp.getInitialProps = async (appCtx) => {
-  console.log("menu");
   const client = Client();
   const menu = (await client.getSingle("menu")) || {};
   return {
