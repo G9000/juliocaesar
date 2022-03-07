@@ -11,7 +11,7 @@ import Layout from "../components/layout";
 const Page = (props) => {
   const router = useRouter();
   useEffect(() => {
-    Fathom.load("SZQCKOOL", {
+    Fathom.load("MRSFPMID", {
       includedDomains: ["www.juliocaesar.co"],
     });
 
