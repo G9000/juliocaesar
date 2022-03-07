@@ -1,11 +1,29 @@
 import { Client } from "../prismic-configuration";
+import { useEffect } from "react";
 import SliceZone from "next-slicezone";
 import { useGetStaticProps } from "next-slicezone/hooks";
+import * as Fathom from "fathom-client";
 
 import resolver from "../sm-resolver.js";
 import Layout from "../components/layout";
 
 const Page = (props) => {
+  useEffect(() => {
+    Fathom.load("SZQCKOOL", {
+      includedDomains: ["www.juliocaesar.co"],
+    });
+
+    function onRouteChangeComplete() {
+      Fathom.trackPageview();
+    }
+    // Record a pageview when route changes
+    router.events.on("routeChangeComplete", onRouteChangeComplete);
+
+    // Unassign event listener
+    return () => {
+      router.events.off("routeChangeComplete", onRouteChangeComplete);
+    };
+  }, []);
   return (
     <Layout menu={props.menu}>
       <SliceZone {...props} resolver={resolver} />

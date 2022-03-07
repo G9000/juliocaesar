@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.1.5",
+    "fathom-client": "^3.4.1",
     "next": "^10.0.8",
     "next-slicezone": "^0.0.14",
     "next-transpile-modules": "^6.1.0",
