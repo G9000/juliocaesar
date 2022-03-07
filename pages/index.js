@@ -3,11 +3,13 @@ import { useEffect } from "react";
 import SliceZone from "next-slicezone";
 import { useGetStaticProps } from "next-slicezone/hooks";
 import * as Fathom from "fathom-client";
+import { useRouter } from "next/router";
 
 import resolver from "../sm-resolver.js";
 import Layout from "../components/layout";
 
 const Page = (props) => {
+  const router = useRouter();
   useEffect(() => {
     Fathom.load("SZQCKOOL", {
       includedDomains: ["www.juliocaesar.co"],
