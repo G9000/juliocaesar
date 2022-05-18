@@ -31,9 +31,9 @@ export default function Index() {
   }
 
   function blockUrl() {
-    toast("Halt! Still under construction. Last update May 05 2022", {
-      icon: "🚧👷🏽👷🏼‍♀️🚧",
-    });
+    toast.error(
+      "🚧 👷🏽 Halt! Still under construction. Last update May 19 2022 👷🏼‍♀️ 🚧"
+    );
     console.log("Not ready");
   }
 
@@ -46,18 +46,22 @@ export default function Index() {
     <div>
       <section className="relative mx-auto overflow-hidden">
         <HeroSectionBg />
-        <div className="flex py-[40vw] md:py-[260px] max-w-[1440px] items-center w-full mx-auto relative">
+        <div className="flex py-[10vh] md:py-[20vh] max-w-[1440px] items-center w-full mx-auto relative">
           <div className="w-full xl:w-2/3 px-[5vw] md:px-20">
-            <h1 className="text-white text-4xl md:text-5xl font-semibold">
+            <span className="text-white">
+              🚧 👷🏽This site is still under active development. Last update May
+              19 2022 👷🏼‍♀️ 🚧
+            </span>
+            <h1 className="text-white text-4xl md:text-5xl font-bold mt-4 gradient-text">
               Building beautiful digital landmarks on the net and finding
               meaningful solutions.
             </h1>
-            <div className="mt-10 flex flex-row lg:items-center gap-x-10">
+            <div className="mt-10 flex flex-row lg:items-center gap-x-4 md:gap-x-10">
               <div className="relative group w-[200px]">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-teal-500 rounded-lg blur transition duration-1000 opacity-75 group-hover:opacity-100" />
                 <button
                   onClick={() => blockUrl()}
-                  className="h-[70px] inline-flex items-center justify-center rounded-lg text-lg w-full bg-cyan-200 text-black font-semibold relative"
+                  className="h-[70px] inline-flex items-center justify-center rounded-lg text-lg w-full bg-cyan-200 text-black font-bold relative"
                 >
                   Read something
                 </button>
@@ -69,21 +73,21 @@ export default function Index() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaGithub className="text-2xl text-white text-opacity-60 hover:text-opacity-100 hover:text-cyan-200" />
+                  <FaGithub className="text-2xl text-cyan-200 text-opacity-40 hover:text-opacity-100" />
                 </a>
                 <a
                   href="https://www.behance.net/juliocaesar"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaBehance className="text-2xl text-white text-opacity-60 hover:text-opacity-100 hover:text-cyan-200" />
+                  <FaBehance className="text-2xl text-cyan-200 text-opacity-40 hover:text-opacity-100" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/juliocaesar/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaLinkedinIn className="text-2xl text-white text-opacity-60 hover:text-opacity-100 hover:text-cyan-200" />
+                  <FaLinkedinIn className="text-2xl text-cyan-200 text-opacity-40 hover:text-opacity-100" />
                 </a>
               </div>
             </div>
