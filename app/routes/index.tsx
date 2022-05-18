@@ -6,6 +6,7 @@ import { getClient } from "../libs/sanity/getClient";
 import imageUrlBuilder from "@sanity/image-url";
 import { config } from "../libs/sanity/config";
 import { toast } from "react-hot-toast";
+import { useEffect } from "react";
 
 export async function loader() {
   const blogs = await getClient().fetch(
@@ -29,6 +30,18 @@ export default function Index() {
     return `/blogs/${url}`;
   }
 
+  function blockUrl() {
+    toast("Halt! Still under construction. Last update May 05 2022", {
+      icon: "🚧👷🏽👷🏼‍♀️🚧",
+    });
+    console.log("Not ready");
+  }
+
+  // clear toast
+  useEffect(() => {
+    toast.dismiss();
+  }, []);
+
   return (
     <div>
       <section className="relative mx-auto overflow-hidden">
@@ -42,7 +55,10 @@ export default function Index() {
             <div className="mt-10 flex flex-row lg:items-center gap-x-10">
               <div className="relative group w-[200px]">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-teal-500 rounded-lg blur transition duration-1000 opacity-75 group-hover:opacity-100" />
-                <button className="h-[70px] inline-flex items-center justify-center rounded-lg text-lg w-full bg-cyan-200 text-black font-semibold relative">
+                <button
+                  onClick={() => blockUrl()}
+                  className="h-[70px] inline-flex items-center justify-center rounded-lg text-lg w-full bg-cyan-200 text-black font-semibold relative"
+                >
                   Read something
                 </button>
               </div>
