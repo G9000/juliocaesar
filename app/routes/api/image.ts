@@ -2,10 +2,7 @@ import type { LoaderFunction } from "@remix-run/node";
 import { imageLoader, DiskCache } from "remix-image/server";
 
 const config = {
-  selfUrl:
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000"
-      : "https://juliocaesar.co/",
+  selfUrl: "http://localhost:3000",
   cache: new DiskCache(),
 };
 
