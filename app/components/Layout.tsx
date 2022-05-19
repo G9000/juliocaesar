@@ -26,7 +26,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <body className="flex w-full bg-neutral-900 relative">
       <div className="w-full min-h-screen h-full flex flex-col">
-        <div className="hidden md:block h-4 bg-cyan-200 bg-opacity-5 border-b border-cyan-500 sticky top-0 z-50" />
+        <div className="hidden md:block bg-cyan-200 bg-opacity-5 border-b border-cyan-500 sticky top-0 z-50" />
         <nav className="flex justify-between items-center max-w-[1640px] w-full mx-auto h-[90px] my-6 z-50 px-[5vw]">
           {!isMobile ? (
             <>
