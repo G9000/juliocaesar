@@ -9,7 +9,7 @@ import {
 } from "@remix-run/react";
 import { Toaster } from "react-hot-toast";
 import styles from "./styles/app.css";
-import "../styles/app.css";
+
 import { Layout } from "./components/Layout";
 
 export const meta: MetaFunction = () => ({
@@ -29,6 +29,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
+
       <Layout>
         <Outlet />
         <ScrollRestoration />

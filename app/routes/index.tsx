@@ -1,6 +1,7 @@
 import { useLoaderData } from "@remix-run/react";
 import { Link } from "@remix-run/react";
 import { FaGithub, FaBehance, FaLinkedinIn } from "react-icons/fa";
+import { HiArrowSmRight } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { getClient } from "../libs/sanity/getClient";
 import imageUrlBuilder from "@sanity/image-url";
@@ -8,21 +9,21 @@ import { config } from "../libs/sanity/config";
 import { toast } from "react-hot-toast";
 import { useEffect } from "react";
 
-export async function loader() {
-  const blogs = await getClient().fetch(
-    `*[_type == "blogs"]{ _id, slug, createdAt, readTime, title, description,  thumbnail, content }`
-  );
+// export async function loader() {
+// //   const blogs = await getClient().fetch(
+// //     `*[_type == "blogs"]{ _id, slug, createdAt, readTime, title, description,  thumbnail, content }`
+// //   );
 
-  return { blogs };
-}
+// //   return { blogs };
+// // }
 
 export default function Index() {
-  let { blogs } = useLoaderData();
+  // let { blogs } = useLoaderData();
 
-  console.log("blogs", blogs);
+  // console.log("blogs", blogs);
 
   const builder = imageUrlBuilder(config);
-  function urlFor(source) {
+  function urlFor(source: any) {
     return builder.image(source);
   }
 
@@ -46,54 +47,91 @@ export default function Index() {
     <div>
       <section className="relative mx-auto overflow-hidden">
         <HeroSectionBg />
-        <div className="flex py-[10vh] md:py-[20vh] max-w-[1440px] items-center w-full mx-auto relative">
+        <div className="flex py-[10vh] md:py-[15vh] max-w-[1440px] items-center w-full mx-auto relative">
           <div className="w-full xl:w-2/3 px-[5vw] md:px-20">
             <span className="text-white">
               🚧 👷🏽This site is still under active development. Last update May
-              19 2022 👷🏼‍♀️ 🚧
+              20 2022 👷🏼‍♀️ 🚧
             </span>
-            <h1 className="text-white text-4xl md:text-5xl font-bold mt-4 gradient-text">
-              Building beautiful digital landmarks on the net and finding
-              meaningful solutions.
+            <h1 className="leading-relaxed text-3xl md:text-4xl md:leading-relaxed font-semibold text-white mt-4">
+              Helping clients to build delightful digital landmarks on the net.
             </h1>
-            <div className="mt-10 flex flex-row lg:items-center gap-x-4 md:gap-x-10">
+            <div className="mt-10 flex flex-col md:flex-row lg:items-center gap-x-4 md:gap-x-10">
               <div className="relative group w-[200px]">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-teal-500 rounded-lg blur transition duration-1000 opacity-75 group-hover:opacity-100" />
                 <button
                   onClick={() => blockUrl()}
-                  className="h-[70px] inline-flex items-center justify-center rounded-lg text-lg w-full bg-cyan-200 text-black font-bold relative"
+                  className="h-[70px] inline-flex items-center justify-center rounded-lg text-xl w-full bg-cyan-200 text-sky-900 font-black relative tracking-tight"
                 >
-                  Read something
+                  Read the blog
                 </button>
               </div>
 
-              <div className="inline-flex items-center px-6 rounded-lg h-[70px] gap-x-6  border-opacity-20 bg-black bg-opacity-40 w-fit shadow-lg">
+              <div className="inline-flex items-center mt-10 md:mt-0 px-6 rounded-lg h-[70px] gap-x-6  border-opacity-20 bg-black bg-opacity-40 w-fit shadow-lg">
+                <span className="text-cyan-200 text-opacity-60">
+                  Find me here:
+                </span>
                 <a
                   href="https://github.com/G9000"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaGithub className="text-2xl text-cyan-200 text-opacity-40 hover:text-opacity-100" />
+                  <FaGithub className="text-2xl text-cyan-200 text-opacity-60 hover:text-opacity-100" />
                 </a>
                 <a
                   href="https://www.behance.net/juliocaesar"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaBehance className="text-2xl text-cyan-200 text-opacity-40 hover:text-opacity-100" />
+                  <FaBehance className="text-2xl text-cyan-200 text-opacity-60 hover:text-opacity-100" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/juliocaesar/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaLinkedinIn className="text-2xl text-cyan-200 text-opacity-40 hover:text-opacity-100" />
+                  <FaLinkedinIn className="text-2xl text-cyan-200 text-opacity-60 hover:text-opacity-100" />
                 </a>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <section className="flex py-[10vh] md:py-[15vh] max-w-[1440px] items-center w-full mx-auto relative mt-40">
+        <div className="w-full px-[5vw] md:px-20 grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-x-20">
+          <div className="col-span-full lg:col-span-4">
+            <img
+              src="./about.jpg"
+              alt="Julio with Tiger graffiti"
+              className="rounded-lg w-full lg:w-[300px] h-full max-h-[370px] object-cover"
+            />
+          </div>
+          <div className="col-span-full lg:col-span-6 lg:col-start-6 mt-16 lg:mt-0">
+            <h2 className="text-3xl text-gray-100 font-semibold">
+              Hi, I'm Julio Caesar. I help clients build delightful quality
+              software through design and development.
+            </h2>
+            <p className="text-2xl text-gray-400 mt-10">
+              After hours, I enjoy learning new stuff and early this year I
+              embarked on a journey to master 日本語 / Japanese language. Else I
+              enjoy ARPG like Path of Exile or FPS like Apex Legend and go by
+              the name Reaper_9000.
+            </p>
+
+            <Link
+              to="/about"
+              className="inline-flex mt-16 text-gray-100 gap-x-6 items-center text-2xl group"
+            >
+              Know more about me
+              <div className="border rounded-full p-2 border-gray-100 border-opacity-20 group-hover:text-cyan-200 group-hover:border-cyan-200 ease-in-out duration-300">
+                <HiArrowSmRight />
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* <section className="py-[260px] max-w-[1180px] w-full mx-auto relative">
         <h2 className="text-5xl text-white font-semibold">Featured post</h2>
 
