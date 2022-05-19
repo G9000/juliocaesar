@@ -104,7 +104,7 @@ export default function Index() {
           <div className="col-span-full lg:col-span-4">
             <Image
               loaderUrl="/api/image"
-              src="./about.jpg"
+              src="https://res.cloudinary.com/djp05suyw/image/upload/v1652974195/about_stt27o.jpg"
               alt="Julio with Tiger graffiti"
               className="rounded-lg"
               responsive={[
