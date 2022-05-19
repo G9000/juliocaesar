@@ -1,11 +1,12 @@
-import type { LoaderFunction } from "@remix-run/node";
-import { imageLoader, DiskCache } from "remix-image/server";
+// import type { LoaderFunction } from "@remix-run/node";
+// import { imageLoader, MemoryCache, pureTransformer } from "remix-image/serverPure";
 
-const config = {
-  selfUrl: "http://localhost:3000",
-  cache: new DiskCache(),
-};
+// const config = {
+//   selfUrl: "http://localhost:3000",
+//   cache: new MemoryCache(),
+//   transformer: pureTransformer
+// };
 
-export const loader: LoaderFunction = ({ request }) => {
-  return imageLoader(config, request);
-};
+// export const loader: LoaderFunction = ({ request }) => {
+//   return imageLoader(config, request);
+// };
