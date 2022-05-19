@@ -8,7 +8,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import { config } from "../libs/sanity/config";
 import { toast } from "react-hot-toast";
 import { useEffect } from "react";
-// import Image from "remix-image";
+import Image from "remix-image";
 
 // export async function loader() {
 // //   const blogs = await getClient().fetch(
@@ -102,7 +102,7 @@ export default function Index() {
       <section className="flex py-[10vh] md:py-[15vh] max-w-[1440px] items-center w-full mx-auto relative mt-40">
         <div className="w-full px-[5vw] md:px-20 grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-x-20">
           <div className="col-span-full lg:col-span-4">
-            {/* <Image
+            <Image
               loaderUrl="/api/image"
               src="https://res.cloudinary.com/djp05suyw/image/upload/v1652974195/about_stt27o.jpg"
               alt="Julio with Tiger graffiti"
@@ -116,11 +116,6 @@ export default function Index() {
                   maxWidth: 1000,
                 },
               ]}
-            /> */}
-            <img
-              src="./about.jpg"
-              alt="Julio with Tiger graffiti"
-              className="rounded-lg w-full lg:w-[300px] h-full max-h-[370px] object-cover"
             />
           </div>
           <div className="col-span-full lg:col-span-6 lg:col-start-6 mt-16 lg:mt-0">
